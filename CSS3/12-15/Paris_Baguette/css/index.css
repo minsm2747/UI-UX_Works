@@ -1,0 +1,851 @@
+/* font설정하기 */
+@font-face{
+    font-family:pbGothic;
+    src:url("../font/PBGothicOTFRg.woff2")
+        format("woff");
+}
+
+/* 기본설정 */
+body {
+    font-family: pbGothic,'Noto Sans KR',sans-serif;
+    font-size:14px;
+    letter-spacing: 0.01em;
+    color:#111;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.center {
+    max-width: 1420px;
+    margin:0 auto;
+    background:rgba(255,0,0,0.3);
+    position: relative;
+}
+
+/* header */
+.search {
+    height:100px;
+    background:white;
+    position:absolute;
+    width:100%;
+    display: none;
+}
+
+/* .search form{
+    
+} */
+
+.search input {
+    font-size:25px;
+    line-height: 50px;
+    position:absolute;
+    left:50px;
+    top:30px;
+    width: 70%;
+    border:0;
+}
+.search a {
+    position: absolute;
+    right:50px;
+    top:50px;
+}
+
+header {
+    background:#023586;
+    height: 90px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    /* position: fixed; */
+    /* z-index: 100; */
+}
+
+.logo {
+    text-align:center;
+    padding-top:35px; 
+}
+
+#nav {
+    position:absolute;
+    width:100%;
+    top:0px;
+    font-family: 'Noto Sans KR',sans-serif;
+}
+
+#nav>.leftNav {
+    float:left;
+}
+
+#nav>ul>li{
+    float:left;
+}
+
+#nav>ul>li>a{
+    display: block;
+    color:white;
+/*    font-weight: bold;*/
+    line-height: 90px;
+    padding:0 12px;
+    font-size: 16px;
+}
+#nav>.rightNav{
+    float:right;
+}
+#nav>.rightNav i{
+    font-size:19px;
+}
+#nav>ul>li>a::after{
+    content: "";
+    display: block;
+    width:0%;
+    height:2px;
+    background:white;
+    transition:0.3s;
+}
+
+#nav>.rightNav>li:last-child>a::after{
+    display: none;
+}
+
+
+#nav>ul>li:hover>a::after{
+    width:100%;
+}
+
+
+.subWrap{
+    display: none;
+    background:white;
+    position:absolute;
+    padding:25px;
+}
+
+#nav>ul>li:hover .subWrap{
+    display: block;
+}
+
+.subWrap>ul{
+    width:320px;
+    float:left;
+}
+.subWrap>ul>li{
+    float:left;
+    width: 160px;
+    line-height: 2.5
+}
+.subWrap>ul>li>a{
+    font-weight: 500;
+    color:#888;
+}
+.subWrap>ul>li>a:hover{
+    color:#023586;
+}
+
+.subWrap>div{
+    float:right;
+}
+
+
+/* #container */
+
+#container .title {
+    font-size:24px;
+    color:#111;
+    font-family:pbGothic;
+    margin-bottom: 40px;
+}
+
+#container .more {
+    position: absolute;
+    right: 0;
+    top: 110px;
+}
+
+#container .more>a {
+    text-decoration: underline;
+    color:#111;
+    font-family: 'Noto Sans KR',sans-serif;
+}
+
+
+/* .mainBanner*/
+.mainBanner {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.banner {
+    width: 200%;
+    transition: 1s;
+}
+
+.banner > li {
+    float: left;
+    width: 16.666666%;
+    position: relative;
+}
+
+.banner > li::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+.banner > li:hover::before {
+    background: rgba(0, 0, 0, 0);
+}
+
+.banner > li img {
+    width: 100%;
+}
+
+.mainBanner input {
+    display: none;
+}
+
+.mainBanner label {
+    position: absolute;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.c1 {
+    margin-left: -30px;
+}
+
+.c2 {
+    margin-left: -10px;
+}
+
+.c3 {
+    margin-left: 10px;
+}
+
+.c4 {
+    margin-left: 30px;
+}
+
+.arrow {
+    top: 50%;
+    /*    background:white;*/
+    display: block;
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+    z-index: 99;
+}
+
+/* .contents*/
+.contents > .center > section {
+    padding: 100px 0 50px;
+    position: relative;
+}
+
+.magazine {}
+
+.magazine > ul {
+    display: flex;
+    margin: 0 -12px;
+}
+
+.magazine > ul > li {
+    width: 33.333333%;
+    padding: 0 12px;
+    position: relative;
+}
+
+.magazine > ul > li > a:first-child {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.magazine > ul > li img {
+    width: 100%;
+}
+
+.magazine > ul > li .textBox {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.magazine > ul > li .textBox strong {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+input:checked + label {
+    background: #023586
+}
+
+/*왼쪽 화살표 */
+#btn2:checked ~ .a1,
+#btn3:checked ~ .a2,
+#btn4:checked ~ .a3 {
+    opacity: 1;
+    left: 30px;
+    transform: rotate(-45deg);
+}
+
+/*오른쪽 화살표*/
+#btn1:checked ~ .a2,
+#btn2:checked ~ .a3,
+#btn3:checked ~ .a4 {
+    opacity: 1;
+    right: 30px;
+    transform: rotate(135deg);
+}
+
+#btn1:checked ~ .banner {
+    margin-left: 0;
+}
+
+#btn2:checked ~ .banner {
+    margin-left: -33.3333333%;
+}
+
+#btn3:checked ~ .banner {
+    margin-left: -66.6666666%;
+}
+
+#btn4:checked ~ .banner {
+    margin-left: -100%;
+}
+
+/* .contents */
+.contents>.center>section {
+    padding: 100px 0 50px;
+    position: relative;
+}
+
+/* .magzine {
+
+} */
+.magzine>ul {
+    display: flex;
+    margin: 0 -12px;
+}
+
+.magzine>ul>li {
+    width: 33.3333333%;
+    padding: 0 12px;
+    position: relative;
+}
+
+.magzine>ul>li>a:first-child {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.magzine>ul>li img {
+    width: 100%;
+}
+
+.magzine>ul>li .textBox {
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.magzine>ul>li .textBox strong {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.gBox {
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); */
+    transition: 0.5s;
+}
+
+.magzine>ul>li:hover .gBox {
+    height: 100%;
+}
+
+/* story */
+
+
+.story li a,
+.promotion li a {
+    display: block;
+    position: relative;
+}
+
+.story li a::after,
+.promotion li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); */
+    transition: 0.5s;
+}
+
+/* .story li>a:hover::after,
+.promotion li>a:hover::after {
+    height: 100%;
+} */
+
+.story>ul>li {
+    float: left;
+    width: 50%;
+    padding-right: 60px;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+}
+
+.story>ul>li>* {
+    width: 40%;
+    float: left;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.story>ul>li img {
+    width: 100%;
+}
+
+.story>ul>li .textBox {
+    padding-left: 90px;
+}
+
+.story>ul>li .textBox .subTitle>a {
+    font-family: "Noto Sans KR" sans-serif;
+    color: #023586;
+}
+
+.story>ul>li .textBox .storyTitle {
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.story>ul>li .textBox .date {
+    font-family: "Noto Sans KR" sans-serif;
+    margin-top: 30px;
+}
+
+/* promotion */
+.promotion {
+    position: relative;
+}
+
+.promotion>.more {
+    position: absolute;
+    right: 0;
+    top: 110px;
+}
+
+.promotion>.more>a {
+    text-decoration: underline;
+    color:#111;
+    font-family: 'Noto Sans KR',sans-serif;
+}
+
+.promotion>ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.promotion>ul>li {
+    width: 325px;
+}
+
+.promotion>ul img {
+    width: 325px;
+}
+
+.promotion>ul>li>a::before {
+    content: "진행 중";
+    display: block;
+    color: #ffffff;
+    background: #023586;
+    position: absolute;
+    font-size: 10px;
+    padding: 2px 4px;
+}
+
+.promotion .textBox>span {
+    display: block;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #023586;
+    margin: 20px 0 15px;    
+}
+
+.promotion .textBox .promotionTitle {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+}
+
+.promotion .textBox a {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #888;
+    font-size: 12px;
+}
+
+.aBtn>button {
+    opacity: 1;
+    background: none;
+    border-right: none;
+    border-bottom: none;
+    position: absolute;
+}
+
+.aBtn>.leftBtn {
+    transform: rotate(-45deg);
+    left: 20px;
+    margin-top: 200px;
+}
+
+.aBtn>.rightBtn {
+    transform: rotate(135deg);
+    right: 20px;
+    margin-top: 200px;
+}
+
+/* products */
+.products {
+    position: relative;
+}
+
+.products>ul {
+    display: flex;
+    margin: 0 -12px;
+}
+
+.products>ul>li {
+    width: 20%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.products>ul>li img {
+    width: 100%;
+    height: 251px;
+}
+
+.products>ul>li .text {
+    padding-top: 20px;
+}
+/* SNS */
+.sns {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.sns h4 {
+    font-size: 25px;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.sns>ul>li {
+    width: 16.66666%;
+    float: left;
+}
+
+.sns>ul>li img {
+    width: 100%;
+}
+
+.sns>ul>li .textBox {
+    padding: 10px;
+}
+
+/* home-banner */
+.home-banner>ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.home-banner>ul>li {
+    width: 30%;
+    height: 110px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 17px;
+    position: relative;
+}
+
+.home-banner>ul>li::before,
+.home-banner>ul>li::after,
+.home-banner>ul>li> a::before,
+.home-banner>ul>li> a::after {
+    content: "";
+    display: block;
+    background: #023586;
+    position: absolute;
+    transition: 0.3s;
+}
+
+.home-banner>ul>li::before,
+.home-banner>ul>li::after {
+    width: 0%;
+    height: 1px;
+}
+
+.home-banner>ul>li> a::before,
+.home-banner>ul>li> a::after {
+    width: 0%;
+    height: 1px;
+}
+
+.home-banner>ul>li::before {
+    left: 0;
+    top: 0;
+}
+
+.home-banner>ul>li::after {
+    right: 0;
+    bottom: 0;
+}
+
+.home-banner>ul>li h5 {
+    color: #023586;
+    margin-left: 15px;
+}
+
+.home-banner>ul>li> a::before {
+    left: 0;
+    top: 0;
+}
+
+.home-banner>ul>li> a::after {
+    left: 0;
+    bottom: 0;
+}
+
+.home-banner>ul>li:hover::before,
+.home-banner>ul>li:hover::after {
+    width: 100%;
+}
+
+.home-banner>ul>li:hover>a::before,
+.home-banner>ul>li:hover>a::after {
+    height: 100%;
+}
+
+/*  footer */
+footer {
+    margin-top: 80px;
+    background: #454a56;
+    color: #ffffff;
+    line-height: 2;
+    padding: 60px 0 15px;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+.footTop>.footMenu {
+    float: left;
+}
+
+.footTop>.footMenu>li {
+    float: left;
+    font-size: 16px;
+    margin-right: 150px;
+}
+
+.footTop>strong {
+    font-size: 16px;
+}
+
+.footTop>.spcWrap {
+    float: left;
+}
+
+.footTop>.spcWrap ul>li {
+    float: left;
+    margin: 15px 15px 0 0;
+}
+
+.footTop>.spcWrap ul>li img {
+    height: 34px;
+}
+
+.footTop>.followWrap {
+    float: right;
+}
+
+.footTop>.followWrap .fsns {
+    display: flex;
+    text-align: center;
+}
+
+.footTop>.followWrap .fsns>li {
+    margin-right: 20px;
+}
+
+.footTop>.followWrap .fsns>li>a {
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
+    border-radius: 50%;
+    padding-top: 7px;
+    box-sizing: border-box;
+}
+
+.footTop>.followWrap img {
+    height: 60%;
+}
+
+.footTop>.followWrap .familySite {
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    padding: 5px 15px;
+    position: relative;
+    width: 198px;
+    box-sizing: border-box;
+    margin: 30px 0;
+}
+
+.footTop>.followWrap .familySite .family {
+    position: absolute;
+    background: #888;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 15px;
+    width: 198px;
+    box-sizing: border-box;
+    bottom: 40px;
+    left: 0;
+    display: none;
+}
+
+.footTop>.followWrap .family>a::after {
+    content: "";
+    border-top: 5px solid #ffffff;
+    border-top: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-top: 5px solid transparent;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+
+.footTop>.followWrap .family ul {
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+.footTop>.fMenu {
+    clear: both;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.footTop>.fMenu>li {
+    padding: 0 10px;
+    font-size: 11px;
+    position: relative;
+}
+
+.footTop>.fMenu>li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 10px;
+    background: #ffffff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footTop>.fMenu>li:last-child::after {
+    display: none;
+}
+
+/* banner Fix */
+.bannerFix {
+    position: fixed;
+    width: 300px;
+    right: 0;
+    top: 90px;
+    z-index: 2000;
+}
+
+.bannerFix>div {
+    position: absolute;
+}
+
+.bannerFix>div img {
+    width: 100%;
+}
+
+.bannerFix>button {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    border: 0;
+    background: none;
+    text-indent: -99999px;
+}
+/* footFix */
+.footFix {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    background: #000000;
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px 10px 15px;
+}
+
+.footFix .top {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.footFix li {
+    margin: 20px 0;
+}
+
+.footFix i {
+    display: block;
+}
+
+.footFix span {
+    color: #ffffff;
+    font-size: 11px;
+    font-family: 'Noto Sans KR', sans-serif;
+}

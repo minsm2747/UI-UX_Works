@@ -1,0 +1,38 @@
+/* CSS Display-Flex 03 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 400px;
+    background:  #faebd7;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.wrap>div {
+    border: 1px solid #000000;
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    background-color: #e9967a;
+    order: 1;
+}
+
+.box2 {
+    width: 380px;
+    height: 180px;
+    background-color: #1e90ff;
+    order: 3;
+}
+
+.box3 {
+    width: 180px;
+    height: 200px;
+    background-color: #00ced1;
+    order: 2;
+}

@@ -1,0 +1,15 @@
+h1 {
+    font-size: 150px;
+    background: url("../images/1612970227.jpg");
+    color: rgba(0, 0, 0, 0);
+    background-clip: text;
+        /* 밴드 프리픽스 */
+        /* 크롬, 사파리 */
+        -webkit-background-clip: text;
+        /* 파이어폭스 */
+        -moz-background-clip: text;
+        /* 오페라 */
+        -o-background-clip: text;
+        /* 익스플로러 */
+        -ms-background-clip: text;
+}

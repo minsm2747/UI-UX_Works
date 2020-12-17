@@ -1,0 +1,22 @@
+/* 기본사항 */
+*, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, dt, dd, li, input,
+button, label {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+button, input {
+    vertical-align: middle;
+}
+
+header, footer, nav, section, article {
+    display: block;
+}
+/* Hideen */
+
+/* Skip */
